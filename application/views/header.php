@@ -35,7 +35,7 @@
 			</form>
 		</div>
 		<?php if($isLoggedIn): ?>
-		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/logout">Выход</A></DIV>
+		<div style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/logout">Выход</A></div>
 		<?php else: ?>
 		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/Registration">Регистрация</A></DIV>
 		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/login">Вход</A></DIV>
