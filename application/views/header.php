@@ -15,35 +15,35 @@
 </head>
     <body>
 <div style='width: 1050px; margin-left: auto; margin-right: auto;'>
-<DIV id="head">
-    <DIV id="signe">
+<div id="head">
+    <div id="signe">
         <a href="/" alt='Воздушный шар' title='Домой :)'> 
         <IMG src="/static/images/sphere.png" width=80>
         </a>
-    </DIV>
-    <!-- <DIV style="float: left; margin: 0px 0.5% ">
-    <DIV style="FONT-FAMILY: 'Comic Sans MS'; COLOR: #2f32a8; FONT-SIZE: 80px">
-        ЧТО СДЕЛАТЬ?
-    </DIV>
-    <DIV style="FONT-STYLE: italic; FONT-FAMILY: 'Comic Sans MS'; COLOR: #dd2f54; FONT-SIZE: 25px">
-        1000 способов сделать свою жизнь ярче
-    </DIV> 
-</DIV> -->
-    <DIV id="name_of_the_site">
+    </div>
+    <div id="name_of_the_site">
         <a href="/ListOfCategories/" alt='Что сделать?' title='Думаешь чем заняться?
         Жми сюда!'>
         <IMG src="/static/images/name_of_the_site.png" width=567px>
         </a>
-    </DIV>
-<DIV style="FLOAT: right; margin: 50px 7% 0 0">
-<?php if($isLoggedIn): ?>
-    <DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/logout">Выход</A></DIV>
-<?php else: ?>
-<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/Registration">Регистрация</A></DIV>
-<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/login">Вход</A></DIV>
-<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></DIV>
-<?php endif;?>
-</DIV></DIV>
+    </div>
+	<div id="search_enter">
+		<div id="search">
+			<form>
+			<input id="field" name="field" type="text" />
+			<button id="submit" name="submit" type="submit" value="Поиск" />
+			</form>
+		</div>
+		<?php if($isLoggedIn): ?>
+		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/logout">Выход</A></DIV>
+		<?php else: ?>
+		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/Registration">Регистрация</A></DIV>
+		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/login">Вход</A></DIV>
+		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></DIV>
+		<?php endif;?>
+	</div>
+	<div class="clear"></div>
+</div>
 <div>
 <div style='background-color: #ffffff; width: 85%; margin: 0 auto;' class='theShaddow'>
 <div>
