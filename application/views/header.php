@@ -30,8 +30,8 @@
 	<div id="search_enter">
 		<div id="search">
 			<form>
-			<input id="field" name="field" type="text" />
-			<button id="submit" name="submit" type="submit" value="Поиск" />
+			<input id="field" name="field" type="text"/>
+			<button id="submit" name="submit" type="submit" value="Поиск"/>
 			</form>
 		</div>
 		<?php if($isLoggedIn): ?>
@@ -59,4 +59,6 @@
 </div>
 <div style='width: 100%'>
 <img src='/static/images/header_back.jpg' width='100%'/>
+</div>
+</div>
 </div>
