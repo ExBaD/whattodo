@@ -19,7 +19,6 @@ body{
         height: 80%;
         text-align: right;
         margin-top: 17px;
-        margin-right: 1%
 }
 #name_of_the_site {
 	    float: left;
@@ -29,35 +28,40 @@ body{
         margin-top: 21px;
 }
 #search_enter {
-		height: 80%;
+		width: 20%;
+        height: 80%;
 		float: right; 
 		margin-top: 17px;
-        margin-right: 2%
+       /* outline: 1px solid #c00;*/
+	
 }
 #search {
-		float: right;
+		width: 170px;
 		margin-top: 10px;
 }
 
 #field {
     float:left;
-    width:120px;
-    height:27px;
+    width:105px;
+    height:32px;
     line-height:27px;
-    text-indent:10px;
+    text-indent:5px;
     font-family:arial, sans-serif;
-    font-size:22px;
-    color:#333;
-    background: #fff;
-    border:solid 1px #183895;
-    outline: none;
+    font-size:12px;
+	background: url(/static/images/field.png) no-repeat center;;
+	border: 1px;
 }
 #submit {
     cursor:pointer;
     width:30px;
     height: 30px;
+	margin-left: 3px;
     background: url(/static/images/search.png) no-repeat center;
 	border: 1px;
+}
+#submit:hover {
+    background: url(/static/images/search_push.png) no-repeat center;
+    border: 1px
 }
 .clear {
 		clear: both;
