@@ -51,11 +51,7 @@ a img {
     font-family:arial, sans-serif;
     font-size:12px;
 	background: url(/static/images/field.png) no-repeat center;
-	border: 1px;
-	line-height:0;
-    font-size:0;
-    text-indent:-999px;
-    color: transparent;
+	border: none;
 }
 #submit {
     cursor:pointer;
@@ -63,11 +59,12 @@ a img {
     height: 30px;
 	margin-left: 3px;
     background: url(/static/images/search.png) no-repeat center;
-	border: 1px;
+	border: none;
+	text-indent: -999px;
 }
 #submit:hover {
     background: url(/static/images/search_push.png) no-repeat center;
-    border: 1px
+    border: none;
 }
 .clear {
 		clear: both;
