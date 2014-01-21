@@ -18,7 +18,7 @@
 <div id="head">
     <div id="signe">
         <a href="/" alt='Воздушный шар' title='Домой :)'> 
-        <IMG src="/static/images/sphere.png" width=80>
+        <IMG src="/static/images/sphere.png" width=80px>
         </a>
     </div>
     <div id="name_of_the_site">
