@@ -31,7 +31,7 @@
 		<div id="search">
 			<form>
 			<input id="field" name="field" type="text"/>
-                        <button id="submit" name="submit" type="submit" value="Поиск"></button>
+            <button id="submit" name="submit" type="submit" value="Поиск"></button>
 			</form>
 		</div>
 		<?php if($isLoggedIn): ?>
