@@ -11,6 +11,7 @@ body{
 	background-image: url(/static/images/heat.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	outline: 1px solid #c00;
 }
 a img {
 	border: none;
@@ -21,6 +22,7 @@ a img {
         height: 80%;
         text-align: right;
         margin-top: 17px;
+		outline: 1px solid #c00;
 }
 #name_of_the_site {
 	    float: left;
@@ -28,13 +30,14 @@ a img {
         height: 80%;
         text-align: center;
         margin-top: 21px;
+		outline: 1px solid #c00;
 }
 #search_enter {
 		width: 20%;
         height: 80%;
 		float: right; 
 		margin-top: 17px;
-       /* outline: 1px solid #c00;*/
+        outline: 1px solid #c00;
 	
 }
 #search {
