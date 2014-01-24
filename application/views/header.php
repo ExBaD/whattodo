@@ -27,22 +27,24 @@
         <IMG src="/static/images/name_of_the_site.png" width=567px>
         </a>
     </div>
-	<div id="search_enter">
-		<div id="search">
-			<form>
-			<input id="field" name="field" type="text"/>
-            <button id="submit" name="submit" type="submit" value="Поиск"></button>
-			</form>
-		</div>
-		<?php if($isLoggedIn): ?>
-		<div style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/logout">Выход</A></div>
-		<?php else: ?>
-		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/Registration">Регистрация</A></DIV>
-		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/login">Вход</A></DIV>
-		<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></DIV>
+    <div id="search_enter">
+	<div id="search">
+		<form>
+		<input id="field" name="field" type="text"/>
+                <button id="submit" name="submit" type="submit" value="Поиск"></button>
+		</form>
+	</div>
+	<?php if($isLoggedIn): ?>
+	<div class="head_button"><a href="/logout">Выход</a></div>
+	<?php else: ?>
+	<div class="head_button"><a href="/login">Вход</a></div>
+        <div id="menu">
+            <div id="registration"><a href="/Registration">Регистрация</a></div>
+            <div style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></div>
+        </div>
 		<?php endif;?>
 	</div>
-	<div class="clear"></div>
+    <div class="clear"></div>
 </div>
 <div>
 <div style='background-color: #ffffff; width: 85%; margin: 0 auto;' class='theShaddow'>
