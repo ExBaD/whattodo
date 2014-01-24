@@ -1,22 +1,22 @@
 body{
-	background-image: url(/static/images/background.jpg);
+    background-image: url(/static/images/background.jpg);
     margin: 0;
-	paddig: 0;
+    paddig: 0;
 }
 #head {
-		width: 1050px;
-		height: 160px;
-		margin-left: auto;
-		margin-right: auto;
-		background-image: url(/static/images/heat.png);
-		background-repeat: no-repeat;
-		background-position: center;
+	width: 1050px;
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(/static/images/heat.png);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 a img {
 	border: none;
 }
 #signe {
-	    float: left;
+	float: left;
         width: 180px;
         height: 128px;
         text-align: right;
@@ -31,37 +31,37 @@ a img {
 }
 #search_enter {
 		width: 205px;
-        height: 128px;
+                height: 128px;
 		float: right; 
 		margin-top: 17px;
        /* outline: 1px solid #c00;*/
 	
 }
 #search {
-		width: 170px;
-		height: 32px;
-		margin-top: 10px;
+	width: 170px;
+	height: 32px;
+	margin-top: 10px;
 }
 
 #field {
-		float:left;
-		width:105px;
-		height:32px;
-		line-height:27px;
-		text-indent:5px;
-		font-family:arial, sans-serif;
-		font-size:12px;
-		background: url(/static/images/field.png) no-repeat center;
-		border: none;
+	float:left;
+	width:105px;
+	height:32px;
+	line-height:27px;
+	text-indent:5px;
+	font-family:arial, sans-serif;
+	font-size:12px;
+	background: url(/static/images/field.png) no-repeat center;
+	border: none;
 }
 #submit {
-		cursor:pointer;
-		width:30px;
-		height: 30px;
-		margin-left: 3px;
-		background: url(/static/images/search.png) no-repeat center;
-		border: none;
-		text-indent: -999px;
+	cursor:pointer;
+	width:30px;
+	height: 30px;
+	margin-left: 3px;
+	background: url(/static/images/search.png) no-repeat center;
+	border: none;
+	text-indent: -999px;
 }
 #submit:hover {
 		background: url(/static/images/search_push.png) no-repeat center;
@@ -69,6 +69,24 @@ a img {
 }
 input::-ms-clear {
 		display: none;
+}
+.head_button {
+        padding-top: 3px;
+        width: 90px;
+        height: 27px;
+        text-align: center;
+        margin-top: 30px;
+        background-color: #183695;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;  
+}
+.head_button a {
+				display: block;
+				text-decoration: none;
+				color: #fff;
+				vertical-align: middle;
 }
 .clear {
 		clear: both;
@@ -78,7 +96,7 @@ input::-ms-clear {
     border-radius: 8px 8px 8px 8px;
     padding: 24px 3% 10px;
     width: 80%;
-	margin: 10px 0 0 30px
+    margin: 10px 0 0 30px
 }
 
 
