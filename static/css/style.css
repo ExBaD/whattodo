@@ -1,14 +1,119 @@
 body{
-	margin: 0;
-	paddig: 0;
+    background-image: url(/static/images/background.jpg);
+    margin: 0;
+    paddig: 0;
+}
+#head {
+	width: 1050px;
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(/static/images/heat.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+a img {
+	border: none;
+}
+#signe {
+	float: left;
+        width: 180px;
+        height: 128px;
+        text-align: right;
+        margin-top: 17px;
+}
+#name_of_the_site {
+		float: left;
+		width: 660px;
+		height: 128px;
+		text-align: center;
+		margin-top: 21px;
+}
+#search_enter {
+		width: 205px;
+                height: 128px;
+		float: right; 
+		margin-top: 17px;
+	
+}
+#search {
+	width: 140px;
+	height: 32px;
+	margin-top: 10px;
+	background: url(/static/images/field.png) no-repeat;
+	background-position: 0 50%;
 }
 
+#field {
+	float:left;
+	width:95px;
+	height:14px;
+	margin: 6px 5px;
+	font-family:arial, sans-serif;
+	font-size:12px;
+	border: none;
+}
+#submit {
+	cursor:pointer;
+	width:30px;
+	height: 30px;
+	margin-left: 3px;
+	background: url(/static/images/search.png) no-repeat center;
+	border: none;
+	text-indent: -999px;
+}
+#submit:hover {
+		background: url(/static/images/search_push.png) no-repeat center;
+		border: none;
+}
+input::-ms-clear {
+		display: none;
+}
+.head_button {
+        width: 90px;
+        height: 30px;
+		margin-left: 20px;
+		text-align: center;
+		line-height: 1.8em;
+        margin-top: 25px;
+        background-color: #183695;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;  
+}
+.head_button  a {
+				display: block;
+				text-decoration: none;
+				color: #fff;
+				vertical-align: middle;
+}
+div.head_button:hover {
+			background-color: #255bde;
+}
+/*#menu {
+		position: absolute;
+		width: 200px;
+		height: 100px;
+		left: 0;
+		top:30px;
+		display: none;
+		background-color: #fff;
+}
+div.head_button:hover #menu {
+							display: block;
+							z-index: 2;
+							background-color: #f0f;
+}*/
+.clear {
+		clear: both;
+}
 .boxB {
     background: none repeat scroll 0 0 #FAF5F7;
     border-radius: 8px 8px 8px 8px;
     padding: 24px 3% 10px;
     width: 80%;
-	margin: 10px 0 0 30px
+    margin: 10px 0 0 30px
 }
 
 

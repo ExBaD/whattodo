@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ЧТО СДЕЛАТЬ?</title>
+<title>Что сделать?</title>
+<link rel="shortcut icon" href="/static/images/sphere.ico" type="image/x-icon">
 <?php foreach($styles as $style): ?>
     <link href="<?php echo URL::base(); ?>static/css/<?php echo $style; ?>.css" 
     rel="stylesheet" type="text/css" />
@@ -14,23 +14,40 @@
 <?php endforeach; ?> 
 </head>
     <body>
-<div style='width: 100%; min-width: 1250px;'>
-<DIV style='height: 150px; margin: 0 auto; width: 60%'>
-<DIV style="FLOAT: left"><IMG src="/static/images/sphere.png" width=80></DIV>
-<DIV style="FLOAT: left; margin-left: 20px">
-<DIV style="FONT-FAMILY: Calibri; COLOR: #31859c; FONT-SIZE: 80px">ЧТО СДЕЛАТЬ?</DIV>
-<DIV style="FONT-STYLE: italic; FONT-FAMILY: Calibri; COLOR: #dd2f54; FONT-SIZE: 25px">1000 способов сделать свою жизнь ярче</DIV></DIV>
-<DIV style="FLOAT: left; margin-left: 20px">
-<?php if($isLoggedIn): ?>
-    <DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/logout">Выход</A></DIV>
-<?php else: ?>    
-<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/Registration">Регистрация</A></DIV>
-<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/login">Вход</A></DIV>
-<DIV style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></DIV>
-<?php endif; ?>
-</DIV></DIV>
-<div style='background-image: url("/static/images/background.jpg");'>
-<div style='background-color: #ffffff; width: 70%; margin: 0 auto;' class='theShaddow'>
+<div style='width: 1050px; margin-left: auto; margin-right: auto;'>
+<div id="head">
+    <div id="signe">
+        <a href="/" alt='Воздушный шар' title='Домой :)'> 
+        <IMG src="/static/images/sphere.png" width=80px>
+        </a>
+    </div>
+    <div id="name_of_the_site">
+        <a href="/ListOfCategories/" alt='Что сделать?' title='Думаешь чем заняться?
+        Жми сюда!'>
+        <IMG src="/static/images/name_of_the_site.png" width=567px>
+        </a>
+    </div>
+    <div id="search_enter">
+	<div id="search">
+		<form>
+		<input id="field" name="field" type="text"/>
+                <button id="submit" name="submit" type="submit" value="Поиск"></button>
+		</form>
+	</div>
+	<?php if($isLoggedIn): ?>
+	<div class="head_button"><a href="/logout">Выход</a></div>
+	<?php else: ?>
+	<div class="head_button""><a href="/login">Вход</a></div>
+        <div id="menu">
+            <div id="registration"><a href="/Registration">Регистрация</a></div>
+            <div style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></div>
+        </div>
+		<?php endif;?>
+	</div>
+    <div class="clear"></div>
+</div>
+<div>
+<div style='background-color: #ffffff; width: 85%; margin: 0 auto;' class='theShaddow'>
 <div>
 <div style='width: 100%;'>
 <div style='width: 98%; color: #ffffff; margin-left: 10px; font-family: Arial; font-size: 17px; font-weight: bold; height: 25px'>
@@ -44,4 +61,6 @@
 </div>
 <div style='width: 100%'>
 <img src='/static/images/header_back.jpg' width='100%'/>
+</div>
+</div>
 </div>
