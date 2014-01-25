@@ -1,0 +1,235 @@
+body{
+	margin: 0;
+	paddig: 0;
+}
+
+.boxB {
+    background: none repeat scroll 0 0 #FAF5F7;
+    border-radius: 8px 8px 8px 8px;
+    padding: 24px 3% 10px;
+    width: 80%;
+	margin: 10px 0 0 30px
+}
+
+
+#blog-feed h1 {
+    border-bottom: 1px solid #DFDBDC;
+    color: #A8A4A6;
+    margin-bottom: 20px;
+    padding-bottom: 11px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+      border-color: #0AB973;
+    color: #0AB973;
+    font-family: 'Droid Sans',Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+}
+
+
+#blog-feed article time {
+    color: #419EAB;
+    display: inline;
+    font-size: 1.286em;
+    font-weight: bold;
+}
+
+#blog-feed article h2.post-title > a {
+    color: #C784A2;
+    text-decoration: none;
+}
+
+#blog-feed article h2.post-title {
+    color: #C784A2;
+    display: inline;
+    font-size: 1.286em;
+    line-height: 1.3em;
+}
+
+#blog-feed article p.post-text {
+	color: #626061;
+    font: 0.875em/1.286em 'Droid Sans',Arial,Helvetica,sans-serif;
+}
+
+.theShaddow {
+    box-shadow:  -5px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.goal__list-pos {
+	background: url("/static/images/goal-cloud.png") no-repeat scroll 0 0 transparent;
+	  color: #FFFFFF;
+    font-size: 36px;
+    height: 73px;
+    left: -10px;
+    width: 80px;
+    padding: 15px 9px;
+    text-align: center;
+    top: 18px;
+	float: left
+	}
+	
+.goal__information, .edit-goal {
+    margin-left: 84px;
+}
+.goal__information a, .edit-goal a {
+    color: #7C7C77;
+    text-decoration: none;
+	font-weight: bold
+}
+.goal__information a:active, .edit-goal a:active {
+    color: #62625E;
+}
+
+.goal__inner {
+    padding: 0.9375em;    
+	padding: 1.875em 0.9375em 0.9375em;
+    position: relative;
+}
+
+.goal {
+    background: none repeat scroll 0 0 #FFFFFF;
+	  color: #7A7A7A;
+    font-family: "Droid Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+.goal:before, .goal:after {
+    content: " ";
+    display: table;
+}
+.goal:after {
+    clear: both;
+}
+.goal form {
+    margin: 0;
+}
+.goal ul {
+    list-style-type: none;
+}
+
+.goal__avatar {
+	  float: left;
+	  margin-right: 10px
+}
+
+.goal__footerbar {
+    background: none repeat scroll 0 0 #D7D7D7;
+    float: left;
+    width: 100%;
+}
+
+.goal__footbar__buttons {
+    float: right;
+	margin: 20px
+}
+
+.report--button {
+    float: left;
+	margin: 20px
+}
+
+.report--button {
+    background-image: url("/static/images/report_flag.png");
+    background-position: 0 -1px;
+    background-repeat: no-repeat;
+    color: #CACACA;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button--add-achievement, .button--add-achievement--cloned, .button--add-goal, .button--add-goal--cloned {
+	background-color: #EBDB51;
+    background-image: url("/static/images/buttons.png");
+    background-repeat: no-repeat;
+    border-radius: 3px 3px 3px 3px;
+    color: transparent;
+    display: inline-block;
+    
+    height: 32px;
+    text-shadow: none;
+    width: 48px;
+}
+
+.goal__coverphoto{
+	text-align: center
+}
+
+.button--add-goal {
+    background-position: right top;
+}
+
+.goal__footbar__buttons a {
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+.achivment_list {
+	border: 1px solid #87CEEB;
+	border-top: 0px none;
+	margin-top: -9px;
+	padding: 10px;
+}
+.achivment_list ol {
+    list-style: none;
+}
+
+.achivment_list ol li{
+    color: #41A1B1;
+    font-size: 1.214em;
+	border-bottom: 1px solid #87CEEB;
+}
+
+.active_tab {	
+	border: 1px solid #87CEEB;
+	border-bottom: 0px none
+}
+
+.passive_tab {
+	border: 1px solid #87CEEB;
+}
+
+.tab {
+	text-align: center; 
+	width: 49.5%;
+	border-radius:  100px 100px 0 0
+}
+
+.tab a {
+        text-decoration: none;
+        color: #0AB973;
+}
+
+.user_name {
+	background-color: #D9E0E7;
+	font-family: tahoma,arial,verdana,sans-serif,Lucida Sans;
+	color: #607387;
+	font-weight: bold;
+	padding-left: 10px
+}
+
+.achivment_title {
+	float: left; 
+	margin-left: 20px;
+	width: 60%
+}
+
+.achivment_number {
+	float: left; 
+	background-image: url("/static/images/circle.jpg"); 
+	width: 50px; 
+	height: 50px;
+	color: white;
+	text-align: center;
+	font-size: 30px
+}
+
+.achivment_category_list li {
+    background-color: #D0EAED;
+    border-radius: 9px 9px 9px 9px;
+    color: #79A7AF;
+    padding: 5px;
+	margin: 10px 0
+
+}
