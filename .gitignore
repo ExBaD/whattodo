@@ -8,3 +8,13 @@ vendor
 images
 hybridauth-2.1.2
 cgi-bin
+/*.md
+/composer.json
+/composer.lock
+system
+
+/composer.phar
+/example_homepage.txt
+
+/testvk.html
+/application/config/database.php
