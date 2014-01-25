@@ -37,7 +37,7 @@
 	<?php if($isLoggedIn): ?>
 	<div class="head_button"><a href="/logout">Выход</a></div>
 	<?php else: ?>
-	<div class="head_button"><a href="/login">Вход</a></div>
+	<div class="head_button""><a href="/login">Вход</a></div>
         <div id="menu">
             <div id="registration"><a href="/Registration">Регистрация</a></div>
             <div style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></div>
