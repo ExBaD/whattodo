@@ -34,11 +34,10 @@ a img {
                 height: 128px;
 		float: right; 
 		margin-top: 17px;
-       /* outline: 1px solid #c00;*/
 	
 }
 #search {
-	width: 170px;
+	width: 140px;
 	height: 32px;
 	margin-top: 10px;
 	background: url(/static/images/field.png) no-repeat;
@@ -73,21 +72,39 @@ input::-ms-clear {
 .head_button {
         width: 90px;
         height: 30px;
-        text-align: center;
+		margin-left: 20px;
+		text-align: center;
 		line-height: 1.8em;
-        margin-top: 30px;
+        margin-top: 25px;
         background-color: #183695;
         font-family: Arial;
         font-size: 16px;
         font-weight: bold;
         border-radius: 5px;  
 }
-.head_button a {
+.head_button  a {
 				display: block;
 				text-decoration: none;
 				color: #fff;
 				vertical-align: middle;
 }
+div.head_button:hover {
+			background-color: #255bde;
+}
+/*#menu {
+		position: absolute;
+		width: 200px;
+		height: 100px;
+		left: 0;
+		top:30px;
+		display: none;
+		background-color: #fff;
+}
+div.head_button:hover #menu {
+							display: block;
+							z-index: 2;
+							background-color: #f0f;
+}*/
 .clear {
 		clear: both;
 }
