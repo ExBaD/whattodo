@@ -42,13 +42,14 @@ a img {
 	height: 32px;
 	margin-top: 10px;
 	background: url(/static/images/field.png) no-repeat;
+	background-position: 0 50%;
 }
 
 #field {
 	float:left;
 	width:95px;
 	height:14px;
-	margin: 5px 5px;
+	margin: 6px 5px;
 	font-family:arial, sans-serif;
 	font-size:12px;
 	border: none;
