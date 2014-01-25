@@ -89,6 +89,11 @@ endforeach;?>
     Загрузить фото <input type='file' name="foto"/>
     </form>
 </div>
+
+<div id="vkCapchaWindow">
+    <img name="vkCapchaIMG" />
+    <input type="text" name="vkCapcha" />
+</div>
 <div id="vk_api_transport"></div>
 <script type="text/javascript">
   window.vkAsyncInit = function() {
@@ -344,8 +349,46 @@ endforeach;?>
                         "message":"Тестовый пост с сайта",
                         "attachments":"http://whattodo.twmail.info/"},               
 
-                        function(r) {   if(r) {    console.log(r);}  } )
-                })
+                        function(r) {   if(r) {    console.log(r);
+                               if(r.error && r.error.error_code === 14)
+                                   {
+                                       $('[name=vkCapchaIMG]').attr('src', r.error.captcha_img);
+                                       $('#vkCapchaWindow').attr('captcha_sid', r.error.captcha_sid);
+                                       $('#vkCapchaWindow').dialog('open'); 
+                                   }
+                        }  } )
+                });
+                
+                $('#vkCapchaWindow').dialog({ 
+                        title: 'Введите капчу',
+			autoOpen: false,
+			width: 400,
+			buttons: [
+				{
+					text: "OK",
+					click: function() {
+                                                VK.Api.call('wall.post', 
+                                                        {"owner_id": "<?php echo $vkUserID?>",
+                                                        "message": "Тестовый пост с сайта",
+                                                        "attachments": "http://whattodo.twmail.info/",
+                                                        "captcha_sid": $('#vkCapchaWindow').attr('captcha_sid'),
+                                                        "captcha_key": $('[name=vkCapcha]').val()},               
+
+                                                        function(r) {   if(r) {    console.log(r);}  } 
+                                                )
+                        
+                        
+						$( this ).dialog( "close" );
+					}
+				},
+				{
+					text: "Отмена",
+					click: function() {
+						$( this ).dialog( "close" );
+					}
+				}
+                        ]
+			});
                
                 
     
