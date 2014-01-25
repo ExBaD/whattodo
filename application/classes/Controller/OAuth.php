@@ -49,14 +49,18 @@
 
             $userProfile = $this->getUserProfile($network_auth);
             
-             $response = $network_auth->api()->api("/me/feed", "post", array(
-                        "message" => "Hi there",
-                        "picture" => "http://whattodo.twmail.info/static/images/sphere.png",
-                        "link" => "http://whattodo.twmail.info",
-                        "name" => "Что сделать?",
-                        "description" => "Бла-бла-бла для поста",
-                        "caption" => "Наш сайт"
-                        ));
+            if($network == 'facebook')
+                $response = $network_auth->api()->api("/me/feed", "post", array(
+                            "message" => "Hi there",
+                            "picture" => "http://whattodo.twmail.info/static/images/sphere.png",
+                            "link" => "http://whattodo.twmail.info",
+                            "name" => "Что сделать?",
+                            "description" => "Бла-бла-бла для поста",
+                            "caption" => "Наш сайт"
+                            ));
+            else
+                $response = $network_auth->setUserStatus('Пост с сайта http://whattodo.twmail.info/');
+
         }
         
         private function getUserProfile($network){                            

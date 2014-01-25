@@ -51,6 +51,7 @@ endforeach;?>
 <a href="#" id="editPhotoAlbom">Редактировать фотоальбом</a>
 <a href="#" id="sendMessageFB">Запостить сообщение FB</a>
 <a href="#" id="sendMessageVK">Запостить сообщение ВК</a>
+<a href="#" id="sendMessageTW">Запостить сообщение TW</a>
 </div>
 </div>
 
@@ -326,6 +327,14 @@ endforeach;?>
                                     {
                                         type: 'POST',
                                         url: '/PostMessage/facebook/'
+                                    })
+                });
+                
+                $('#sendMessageTW').click(function(){
+                    $.ajax(
+                                    {
+                                        type: 'POST',
+                                        url: '/PostMessage/twitter/'
                                     })
                 });
                 
