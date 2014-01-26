@@ -20,5 +20,6 @@
 			</div>		
 </div>
 </div>
+<?php echo $footer?>
 </body>
 </html>

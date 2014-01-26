@@ -136,6 +136,12 @@ Route::set('header', 'header')
 		'action'     => 'index',
 	));
 
+Route::set('footer', 'footer')
+	->defaults(array(
+		'controller' => 'footer',
+		'action'     => 'index',
+	));
+
 Route::set('ListOfAchivments', 'ListOfAchivments/<category>', array('category' => '.+'))
 	->defaults(array(
 		'controller' => 'ListOfAchivments',

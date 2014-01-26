@@ -10,6 +10,9 @@ class Controller_Achivment extends Controller_CommonAuthorized {
                 $header_url = 'header/';
                 $header = Request::factory($header_url)->execute();
                 
+                $footer_url = 'footer/';
+                $footer = Request::factory($footer_url)->execute();
+                
 		$content = View::factory('Achivment');
  
                 $achivmentID = $this->request->param('id');
@@ -17,6 +20,7 @@ class Controller_Achivment extends Controller_CommonAuthorized {
                 
                 $this->template->content = $content;
                 $this->template->header = $header;
+                $this->template->footer = $footer;
                 $this->template->achivment = $achivmentINFO;
 	}
 

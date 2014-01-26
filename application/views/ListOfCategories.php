@@ -25,5 +25,6 @@ foreach($categories as $category): ?>
 			</div>		
 </div>
 </div>
+<?php echo $footer ?>
 </body>
 </html>

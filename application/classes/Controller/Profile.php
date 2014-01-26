@@ -11,6 +11,9 @@ class Controller_Profile extends Controller_CommonAuthorized {
 	{     
                 $header_url = 'header/';
                 $header = Request::factory($header_url)->execute();
+                                
+                $footer_url = 'footer/';
+                $footer = Request::factory($footer_url)->execute();
                 
 		$content = View::factory('Profile');
  
@@ -31,6 +34,7 @@ class Controller_Profile extends Controller_CommonAuthorized {
                 
                 $this->template->content = $content;
                 $this->template->header = $header;
+                $this->template->footer = $footer;
                 $this->template->achivments = $achivments;
                 $this->template->categories = $categories;
                 $this->template->profileValues = $profileValues;

@@ -424,5 +424,6 @@ endforeach;?>
                 
     
 </script>
+<?php echo $footer ?>
 </body>
 </html>

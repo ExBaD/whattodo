@@ -11,6 +11,9 @@ class Controller_ListOfAchivments extends Controller_Common {
                 $header_url = 'header/';
                 $header = Request::factory($header_url)->execute();
                 
+                $footer_url = 'footer/';
+                $footer = Request::factory($footer_url)->execute();
+                
 		$content = View::factory('ListOfAchivments');
                 
                 $categoryURL = $this->request->param('category');
@@ -19,6 +22,7 @@ class Controller_ListOfAchivments extends Controller_Common {
                 
                 $this->template->content = $content;
                 $this->template->header = $header;
+                $this->template->footer = $footer;
                 
                 $this->template->achivments = $listOfAchivments;
                 $this->template->categoryName = $categoryINFO['Name'];
