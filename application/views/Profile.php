@@ -99,7 +99,7 @@ endforeach;?>
   window.vkAsyncInit = function() {
     VK.init({
       apiId: '<?php echo $vkAppKey?>'
-    });
+    });    
   };
 
   setTimeout(function() {
@@ -344,19 +344,27 @@ endforeach;?>
                 });
                 
                 $('#sendMessageVK').click(function(){
-                    VK.Api.call('wall.post', 
-                        {"owner_id":"<?php echo $vkUserID?>",
-                        "message":"Тестовый пост с сайта",
-                        "attachments":"http://whattodo.twmail.info/"},               
+                                    
+                            function vkPostMessage(){
+                                VK.Api.call('wall.post', 
+                                                    {"owner_id":"<?php echo $vkUserID?>",
+                                                    "message":"Тестовый пост с сайта",
+                                                    "attachments":"http://whattodo.twmail.info/"},               
 
-                        function(r) {   if(r) {    console.log(r);
-                               if(r.error && r.error.error_code === 14)
-                                   {
-                                       $('[name=vkCapchaIMG]').attr('src', r.error.captcha_img);
-                                       $('#vkCapchaWindow').attr('captcha_sid', r.error.captcha_sid);
-                                       $('#vkCapchaWindow').dialog('open'); 
-                                   }
-                        }  } )
+                                                    function(r) {   
+                                                        if(r) {    
+                                                                console.log(r);
+                                                                if(r.error && r.error.error_code === 14)
+                                                                   {
+                                                                       $('[name=vkCapchaIMG]').attr('src', r.error.captcha_img);
+                                                                       $('#vkCapchaWindow').attr('captcha_sid', r.error.captcha_sid);
+                                                                       $('#vkCapchaWindow').dialog('open'); 
+                                                                   }
+                                                               }  
+                                            })
+                            }
+                            
+                             vkCheckAutorised(vkPostMessage);                                    
                 });
                 
                 $('#vkCapchaWindow').dialog({ 
@@ -389,7 +397,30 @@ endforeach;?>
 				}
                         ]
 			});
-               
+                        
+                  function vkLogin(fn){
+                   VK.Auth.login(function(response) {
+                            if (response.session) {
+                              /* Пользователь успешно авторизовался */
+                                    fn();
+                            } else {
+                              /* Пользователь нажал кнопку Отмена в окне авторизации */
+                                   alert('Ошибка авторизации ВК');
+                            }
+                          });
+                  }
+                  
+                  function vkCheckAutorised(fn){              
+                        VK.Auth.getLoginStatus(function(response) {
+                          if (response.session) {
+                            /* Авторизованный в Open API пользователь */
+                            fn();
+                          } else {
+                            /* Неавторизованный в Open API пользователь */
+                            vkLogin(fn);
+                          }
+                        }); 
+                  }
                 
     
 </script>
