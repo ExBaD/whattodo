@@ -38,11 +38,15 @@ class Controller_Login extends Controller_Common {
                 $header_url = 'header/';
                 $header = Request::factory($header_url)->execute();
                 
+                $footer_url = 'footer/';
+                $footer = Request::factory($footer_url)->execute();
+                
 		$content = View::factory('Login');
                 
                 $this->template->content = $content;
                 $this->template->actionURL = 'register';
                 $this->template->header = $header;
+                $this->template->footer = $footer;
         }
         
         public function action_register(){
