@@ -1,7 +1,11 @@
 body{
     background-image: url(/static/images/background.jpg);
     margin: 0;
-    paddig: 0;
+    padding: 0;
+}
+#page {
+        width: 1050px;
+        margin: 0px auto;
 }
 #head {
 	width: 1050px;
@@ -22,6 +26,9 @@ a img {
         text-align: right;
         margin-top: 17px;
 }
+#signe img:hover {
+               margin-top: -2px; 
+}
 #name_of_the_site {
 		float: left;
 		width: 660px;
@@ -29,7 +36,7 @@ a img {
 		text-align: center;
 		margin-top: 21px;
 }
-#search_enter {
+#search_buttons {
 		width: 205px;
                 height: 128px;
 		float: right; 
@@ -37,50 +44,59 @@ a img {
 	
 }
 #search {
-	width: 140px;
-	height: 32px;
+	width: 155px;
+	height: 34px;
 	margin-top: 10px;
 	background: url(/static/images/field.png) no-repeat;
 	background-position: 0 50%;
+	/*border: 1px solid black;*/
 }
 
 #field {
-	float:left;
-	width:95px;
-	height:14px;
-	margin: 6px 5px;
-	font-family:arial, sans-serif;
-	font-size:12px;
+	width: 87px;
+	height: 13px;
+	/*margin: 7px 4px;*/
+	font-family: arial, sans-serif;
+	font-size: 12px;
 	border: none;
+}
+.search {
+		width: 88px;
+		margin: 5px 5px;
+		/*border: 1px solid black;*/
+		float:left;
 }
 #submit {
 	cursor:pointer;
 	width:30px;
 	height: 30px;
-	margin-left: 3px;
+	margin-top: 2px;
+        margin-left: 10px;
 	background: url(/static/images/search.png) no-repeat center;
 	border: none;
 	text-indent: -999px;
 }
 #submit:hover {
-		background: url(/static/images/search_push.png) no-repeat center;
+		/*background: url(/static/images/search_push.png) no-repeat center;*/
 		border: none;
+                margin-top: 1px;
 }
 input::-ms-clear {
 		display: none;
 }
 .head_button {
-        width: 90px;
-        height: 30px;
-		margin-left: 20px;
-		text-align: center;
-		line-height: 1.8em;
-        margin-top: 25px;
+        width: 85px;
+        height: 26px;
+	margin-left: 15px;
+	text-align: center;
+	line-height: 1.6em;
+        margin-top: 15px;
         background-color: #183695;
         font-family: Arial;
         font-size: 16px;
         font-weight: bold;
-        border-radius: 5px;  
+        border-radius: 5px;
+        color: #fff;
 }
 .head_button  a {
 				display: block;
@@ -90,23 +106,137 @@ input::-ms-clear {
 }
 div.head_button:hover {
 			background-color: #255bde;
+                        box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
-/*#menu {
-		position: absolute;
-		width: 200px;
-		height: 100px;
-		left: 0;
-		top:30px;
-		display: none;
+.enter {
+         width: 90px;
+         margin-left: 15px;
+         background-color: #7D26CD;
+         cursor: pointer;
+}
+div.enter:hover {
+			background-color: #9B30FF;
+                        box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+.registration {
+                width: 95px;
+                height: 20px;
+                margin-left: 30px;
+                background-color: #00A500;
+                line-height: 1.7em;
+                font-family: Arial;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 4px; 
+}
+div.registration:hover {
+			background-color: #32CD32;
+                        box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+                
+}
+.exit {
+       margin-top: 30px;
+}
+div#menu {
+                    *position: relative; /*правило для EI7 и ниже*/
+}
+#menu {
+        position: absolute;
+        width: 220px;
+		margin: 10px -65px;
+        /*display: none;*/
 		background-color: #fff;
+        border-radius: 5px;
+        font-family: arial;
+        font-size: 14px;
+        box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+        cursor: auto;
+        color: black;
+        z-index: 10;
 }
-div.head_button:hover #menu {
-							display: block;
-							z-index: 2;
-							background-color: #f0f;
+/*div.enter:hover #menu {
+			display: block;
 }*/
+#menu a {
+        color: black;
+}
+.social_button {
+                width: 30px;
+                height: 30px;
+                margin: 4px 4px;
+                float: left;
+                display: block;
+                cursor: pointer;
+}
+.Vk {
+    background: url(/static/images/Vk.png) no-repeat center;
+}
+.fb {
+    background: url(/static/images/fb.png) no-repeat center;
+}
+.tw {
+    background: url(/static/images/tw.png) no-repeat center;
+}
 .clear {
-		clear: both;
+	clear: both;
+}
+#menu_line_slider {
+					width: 895px;
+					margin: 0 auto;
+					background-color: #fff; 
+}
+#menu_line {
+			width: 895px;
+			padding-top: 2px;
+}
+#container {
+			width: 875px;
+			height: 23px;			
+			margin: 3px auto;
+			color: #ffffff;  
+			font-family: Arial; 
+			font-size: 17px; 
+			font-weight: bold;
+			text-align: center;
+			line-height: 1.6em;
+}
+.menu_button {
+				float: left;  
+				width: 173.4px;
+				height: 28px;
+				margin-left: 2px;
+}
+.menu_button a {
+				display: block;
+				color: white; 
+				text-decoration: none;
+}
+.home {
+		background-color: #19375E;
+		margin-left: 0;
+}
+.your_list {
+			background-color: #31859C;
+}
+.read_lists {
+			background-color: #5BBF4D;
+}
+.ideas {
+		background-color: #E9AD17;
+}
+.top_100 {
+		background-color: #DD2F54;
+}
+.menu_button:hover {
+				width: 179.4px;
+				height: 32px;
+				margin-top: -8px;
+				font-size: 18px;
+				line-height: 1.7em;
+}
+#container:hover  {
+					width: 881px;
+					cursor: pointer;
 }
 .boxB {
     background: none repeat scroll 0 0 #FAF5F7;
@@ -115,8 +245,6 @@ div.head_button:hover #menu {
     width: 80%;
     margin: 10px 0 0 30px
 }
-
-
 #blog-feed h1 {
     border-bottom: 1px solid #DFDBDC;
     color: #A8A4A6;
@@ -338,3 +466,15 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 10px 0
 
 }
+.hide-layout {
+  background: #000; 
+  bottom: 0;  
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); 
+  height: 100%;   
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 5;
+  display: none;
+ }

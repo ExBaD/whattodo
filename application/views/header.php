@@ -10,57 +10,84 @@
   
 <?php foreach($js as $j): ?>
     <script src="<?php echo URL::base(); ?>static/js/<?php echo $j; ?>.js" 
-    type="text/javascript"></script> 
-<?php endforeach; ?> 
+    type="text/javascript"></script>
+<?php endforeach; ?>
+    
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#menu').hide(); 
+          $('#hide-layout').css({opacity: 0.1}); 
+          $('#click-me').click(function() {
+            $('#hide-layout, #menu').fadeIn(300);
+          });
+          $('#hide-layout').click(function() {
+            $('#hide-layout, #menu').fadeOut(300); 
+          });
+          $('#btn-ok,').click(function() {
+            $('#hide-layout, #popup').fadeOut(300); 
+          });
+		});
+	</script>
+    
 </head>
     <body>
-<div style='width: 1050px; margin-left: auto; margin-right: auto;'>
+<div id="page">
 <div id="head">
     <div id="signe">
         <a href="/" alt='Воздушный шар' title='Домой :)'> 
-        <IMG src="/static/images/sphere.png" width=80px>
+        <IMG src="/static/images/sphere.png">
         </a>
     </div>
     <div id="name_of_the_site">
         <a href="/ListOfCategories/" alt='Что сделать?' title='Думаешь чем заняться?
         Жми сюда!'>
-        <IMG src="/static/images/name_of_the_site.png" width=567px>
+        <IMG src="/static/images/name_of_the_site.png">
         </a>
     </div>
-    <div id="search_enter">
+    <div id="search_buttons">
 	<div id="search">
 		<form>
-		<input id="field" name="field" type="text"/>
+		<div class="border search"><input id="field" name="field" type="text"/></div>
                 <button id="submit" name="submit" type="submit" value="Поиск"></button>
 		</form>
 	</div>
 	<?php if($isLoggedIn): ?>
-	<div class="head_button"><a href="/logout">Выход</a></div>
+	<div class="head_button exit"><a href="/logout">Выход</a></div>
 	<?php else: ?>
-	<div class="head_button""><a href="/login">Вход</a></div>
-        <div id="menu">
-            <div id="registration"><a href="/Registration">Регистрация</a></div>
-            <div style="FONT-FAMILY: Calibri; FONT-SIZE: 20px"><A style="COLOR: #00b0f0;" href="/SNLogin/VKontakte">ВК</A> <A style="COLOR: #00b0f0;" href="SNLogin/facebook">FB</A> <A style="COLOR: #00b0f0;" href="SNLogin/twitter">TW</A></div>
+        <div class="head_button enter"><a id="click-me" href="#">Вход</a><div id="menu">
+			<div style='margin: 10px auto; width: 210px;'>
+				<form method='POST'>
+					<div>E-mail <input type="text" name="e-mail"/></div>
+					<div>Пароль <input type="password" name="pass"/></div>
+					<div><input id="btn-ok" type='submit' value='Войти'/></div>
+				</form>
+				<a>Я забыл пароль</a>
+				</div><p style="text-align: left; margin-left: 4px; float: left;">Войти через:</p>
+				<a href="/SNLogin/VKontakte"><div class="social_button Vk"></div></a>
+				<a href="/SNLogin/facebook"><div class="social_button fb"></div></a>
+				<a href="/SNLogin/twitter"><div class="social_button tw"></div></a>
+            </div>
         </div>
-		<?php endif;?>
+	<div class="head_button registration"><a href="/Registration">Регистрация</a></div>
+        <?php endif;?>
 	</div>
     <div class="clear"></div>
+	
 </div>
-<div>
-<div style='background-color: #ffffff; width: 85%; margin: 0 auto;' class='theShaddow'>
-<div>
-<div style='width: 100%;'>
-<div style='width: 98%; color: #ffffff; margin-left: 10px; font-family: Arial; font-size: 17px; font-weight: bold; height: 25px'>
-<div style='float: left; background-color: #17375E; width: 15%; text-align: center; height: 100%'>Дом</div>
-<div style='float: left; background-color: #31859C; width: 23%; text-align: center; height: 100%'><a href="/Profile/" style='color: white; text-decoration: none'>Твой список</a></div>
-<div style='float: left; background-color: #5BBF4D; width: 25%; text-align: center; height: 100%'><a href="/ListOfCategories/" style='color: white; text-decoration: none'>Читать списки</a></div>
-<div style='float: left; background-color: #E9AD17; width: 22%; text-align: center; height: 100%'>Идеи</div>
-<div style='float: left; background-color: #DD2F54; width: 15%; text-align: center; height: 100%'>Топ 100</div>
-</div>
-</div>
-</div>
-<div style='width: 100%'>
+    
+<div id="menu_line_slider">
+	<div id='menu_line'>
+		<div id='container'>
+		<div class='menu_button home'><a href="/">Домой</a></div>
+		<div class='menu_button your_list'><a href="/Profile/">Твой список</a></div>
+		<div class='menu_button read_lists'><a href="/ListOfCategories/">Читать списки</a></div>
+		<div class='menu_button ideas'>Идеи</div>
+		<div class='menu_button top_100'>Топ 100</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+<div style='width: 98%; margin: 4px auto;'>
 <img src='/static/images/header_back.jpg' width='100%'/>
 </div>
 </div>
-</div>
+<div id="hide-layout" class="hide-layout"></div>
